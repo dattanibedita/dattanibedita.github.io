@@ -15,11 +15,11 @@ If you too, are a data scientist, I highly recommend building a website for your
 
 Not only you show your capabilities, but building a website can be immensely satisfying as well.
 
-I had the basic framework for this website in 3 days.
+I had the basic framework for this website in 6 hours.
 
-If you have not used github before, even then it won't take you more than 3 days to build this website.
+If you have not used github before, even then it won't take you more than 6 hours to build this website.
 
-I had to figure out everything from scratch and had lot of failures on the way. If you follow the steps mentioned by me, it might take you as little as 1 day to build your own website.
+I had to figure out everything from scratch and had lot of failures on the way. If you follow the steps mentioned by me, it might take you as little as 2 hours to build your own website.
 
 So, follow along!
 
