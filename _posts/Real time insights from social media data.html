@@ -13017,45 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13116,6 +13077,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Project:-Real-time-Insights-From-Social-Media-Data">Project: Real-time Insights From Social Media Data<a class="anchor-link" href="#Project:-Real-time-Insights-From-Social-Media-Data">&#182;</a></h1><p><em>Datacamp project solution by Nibedita Datta</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Local-and-global-thought-patterns">1. Local and global thought patterns<a class="anchor-link" href="#1.-Local-and-global-thought-patterns">&#182;</a></h2><p>While we might not be Twitter fans, we have to admit that it has a huge influence on the world (who doesn't know about Trump's tweets). Twitter data is not only gold in terms of insights, but <strong><em>Twitter-storms are available for analysis in near real-time</em></strong>. This means we can learn about the big waves of thoughts and moods around the world as they arise. </p>
 <p>As any place filled with riches, Twitter has <em>security guards</em> blocking us from laying our hands on the data right away ⛔️ Some  authentication steps (really straightforward) are needed to call their APIs for data collection. Since our goal today is learning to extract insights from data, we have already gotten a green-pass from security ✅ Our data is ready for usage in the datasets folder — we can concentrate on the fun part! 🕵️‍♀️🌎
 <br>
@@ -13127,7 +13096,7 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
@@ -13166,75 +13135,14 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_pandas_loaded():
-    assert &#39;json&#39; in globals(), \
-    &#39;Did you import the json module?&#39;
-    
-def test_WW_trends_correctly_loaded():
-    correct_ww_trends = json.loads(open(&#39;datasets/WWTrends.json&#39;).read())
-    assert correct_ww_trends == WW_trends, &quot;The variable WW_trends should contain the data in WWTrends.json.&quot;
-
-def test_US_trends_correctly_loaded():
-    correct_us_trends = json.loads(open(&#39;datasets/USTrends.json&#39;).read())
-    assert correct_us_trends == US_trends, &quot;The variable WW_trends should contain the data in USTrends.json.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3/3 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Prettifying-the-output">2. Prettifying the output<a class="anchor-link" href="#2.-Prettifying-the-output">&#182;</a></h2><p>Our data was hard to read! Luckily, we can resort to the <i>json.dumps()</i> method to have it formatted as a pretty JSON string.</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
@@ -14001,71 +13909,7 @@ def test_US_trends_correctly_loaded():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# Not sure what to check here
-
-# One or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def strip_comment_lines(cell_input):
-    &quot;&quot;&quot;Returns cell input string with comment lines removed.&quot;&quot;&quot;
-    return &#39;\n&#39;.join(line for line in cell_input.splitlines() if not line.startswith(&#39;#&#39;))
-
-last_input = strip_comment_lines(In[-2])
-
-def test_info_command():
-    assert &#39;json.dumps(WW_trends&#39; in last_input, \
-        &quot;We expected the json.dumps method with the correct input object.&quot;
-    assert &#39;json.dumps(US_trends&#39; in last_input, \
-         &quot;We expected the json.dumps method with the correct input object.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.--Finding-common-trends">3.  Finding common trends<a class="anchor-link" href="#3.--Finding-common-trends">&#182;</a></h2><p>🕵️‍♀️ From the pretty-printed results (output of the previous task), we can observe that:</p>
@@ -14081,7 +13925,7 @@ def test_info_command():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
@@ -14128,71 +13972,7 @@ def test_info_command():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-
-# One or more tests of the students code. 
-# The @solution should pass the tests.
-# The purpose of the tests is to try to catch common errors and to 
-# give the student a hint on how to resolve these errors.
-
-def test_ww_trends():
-    correct_world_trends = set([trend[&#39;name&#39;] for trend in WW_trends[0][&#39;trends&#39;]])
-    assert world_trends == correct_world_trends, \
-    &#39;The variable world_trends does not have the expected trend names.&#39;
-   
-def test_us_trends():
-    correct_us_trends = set([trend[&#39;name&#39;] for trend in US_trends[0][&#39;trends&#39;]])
-    assert us_trends == correct_us_trends, \
-    &#39;The variable us_trends does not have the expected trend names.&#39;
-
-def test_common_trends():
-    correct_common_trends = world_trends.intersection(us_trends)
-    assert common_trends == correct_common_trends, \
-    &#39;The variable common_trends does not have the expected common trend names.&#39;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3/3 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.-Exploring-the-hot-trend">4. Exploring the hot trend<a class="anchor-link" href="#4.-Exploring-the-hot-trend">&#182;</a></h2><p>🕵️‍♀️ From the intersection (last output) we can see that, out of the two sets of trends (each of size 50), we have 11 overlapping topics. In particular, there is one common trend that sounds very interesting: <i><b>#WeLoveTheEarth</b></i> — so good to see that <em>Twitteratis</em> are unanimously talking about loving Mother Earth! 💚 </p>
@@ -14206,7 +13986,7 @@ If we query Twitter's search API with this hashtag as query parameter, we get ba
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
@@ -14466,62 +14246,7 @@ If we query Twitter's search API with this hashtag as query parameter, we get ba
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_tweets_loaded_correctly():
-    correct_tweets_data = json.loads(open(&#39;datasets/WeLoveTheEarth.json&#39;).read())
-    assert correct_tweets_data == tweets, &quot;The variable tweets should contain the data in WeLoveTheEarth.json.&quot;
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-Digging-deeper">5. Digging deeper<a class="anchor-link" href="#5.-Digging-deeper">&#182;</a></h2><p>🕵️‍♀️ Printing the first two tweet items makes us realize that there’s a lot more to a tweet than what we normally think of as a tweet — there is a lot more than just a short text!</p>
@@ -14530,7 +14255,7 @@ def test_tweets_loaded_correctly():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
@@ -14611,76 +14336,7 @@ def test_tweets_loaded_correctly():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_extracted_texts():
-    correct_text = [tweet[&#39;text&#39;] for tweet in tweets ]
-    assert texts == correct_text, \
-    &#39;The variable texts does not have the expected text data.&#39;
-   
-def test_extracted_names():
-    correct_names = [user_mention[&#39;screen_name&#39;] 
-                         for tweet in tweets 
-                             for user_mention in tweet[&#39;entities&#39;][&#39;user_mentions&#39;]]
-    assert correct_names == names, \
-    &#39;The variable names does not have the expected user names.&#39;
-    
-def test_extracted_hashtags():
-    correct_hashtags = [hashtag[&#39;text&#39;] 
-                            for tweet in tweets
-                                 for hashtag in tweet[&#39;entities&#39;][&#39;hashtags&#39;]]
-    assert correct_hashtags == hashtags, \
-    &#39;The variable hashtags does not have the expected hashtag data.&#39;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[11]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3/3 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6.-Frequency-analysis">6. Frequency analysis<a class="anchor-link" href="#6.-Frequency-analysis">&#182;</a></h2><p>🕵️‍♀️ Just from the first few results of the last extraction, we can deduce that:</p>
@@ -14694,13 +14350,13 @@ def test_extracted_hashtags():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importing modules</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 
 <span class="c1"># Counting occcurrences/ getting frequency dist of all names and hashtags</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="n">names</span><span class="p">,</span> <span class="n">hashtags</span><span class="p">]:</span>
@@ -14735,62 +14391,7 @@ def test_extracted_hashtags():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_counter():
-    for item in [names, hashtags]: correct_counter = Counter(item)  
-    assert c == correct_counter, \
-    &quot;The variable c does not have the expected values.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="7.-Activity-around-the-trend">7. Activity around the trend<a class="anchor-link" href="#7.-Activity-around-the-trend">&#182;</a></h2><p>🕵️‍♀️ Based on the last frequency distributions we can further build-up on our deductions:</p>
@@ -14809,7 +14410,7 @@ def test_counter():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
@@ -14823,78 +14424,14 @@ def test_counter():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_retweets():
-    correct_retweets = [
-             (tweet[&#39;retweet_count&#39;], 
-              tweet[&#39;retweeted_status&#39;][&#39;favorite_count&#39;],
-              tweet[&#39;retweeted_status&#39;][&#39;user&#39;][&#39;followers_count&#39;],
-              tweet[&#39;retweeted_status&#39;][&#39;user&#39;][&#39;screen_name&#39;],
-              tweet[&#39;text&#39;]) 
-            
-            for tweet in tweets 
-                if &#39;retweeted_status&#39; in tweet
-           ]
-    assert correct_retweets == retweets, \
-    &quot;The retweets variable does not have the expected values. Check the names of the extracted field and their order.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="8.-A-table-that-speaks-a-1000-words">8. A table that speaks a 1000 words<a class="anchor-link" href="#8.-A-table-that-speaks-a-1000-words">&#182;</a></h2><p>Let's manipulate the data further and visualize it in a better and richer way — <em>"looks matter!"</em></p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
@@ -17605,84 +17142,7 @@ Lil Dicky : *hold my beer*
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-    
-def strip_comment_lines(cell_input):
-    &quot;&quot;&quot;Returns cell input string with comment lines removed.&quot;&quot;&quot;
-    return &#39;\n&#39;.join(line for line in cell_input.splitlines() if not line.startswith(&#39;#&#39;))
-
-last_input = strip_comment_lines(In[-2])
-
-
-def test_df_creation_command():
-    assert &#39;retweets&#39; in last_input, \
-        &quot;The input data for DataFrame creation is not as expected.&quot;
-    assert &#39;columns=&#39; in last_input, \
-        &quot;The columns parameter is missing.&quot;
-    assert &#39;groupby&#39; in last_input, \
-        &quot;The groupby method is missing.&quot;
-    assert &#39;sum()&#39; in last_input, \
-        &quot;The sum method is missing.&quot;
-    assert &#39;sort_values&#39; in last_input, \
-        &quot;The sort_values method is missing.&quot;
-    assert &#39;ascending&#39; in last_input, \
-        &quot;The ascending parameter is missing.&quot;
-    
-def test_dataframe():
-    correct_dataframe = pd.DataFrame(retweets, columns=[&#39;Retweets&#39;,&#39;Favorites&#39;, &#39;Followers&#39;, &#39;ScreenName&#39;, &#39;Text&#39;]).groupby(
-    [&#39;ScreenName&#39;,&#39;Text&#39;,&#39;Followers&#39;]).sum().sort_values(by=[&#39;Followers&#39;], ascending=False)
-    assert correct_dataframe.equals(df), \
-    &quot;The created dataframe does not match the expected dataframe.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2/2 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="9.-Analyzing-used-languages">9. Analyzing used languages<a class="anchor-link" href="#9.-Analyzing-used-languages">&#182;</a></h2><p>🕵️‍♀️ Our table tells us that:</p>
@@ -17697,7 +17157,7 @@ def test_dataframe():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
@@ -17754,94 +17214,7 @@ def test_dataframe():
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-# One or more tests of the student&#39;s code
-# The @solution should pass the tests
-# The purpose of the tests is to try to catch common errors and
-# to give the student a hint on how to resolve these errors
-
-def test_tweet_languages():
-    correct_tweet_languages = []
-    for tweet in tweets: correct_tweet_languages.append(tweet[&#39;lang&#39;])
-    assert correct_tweet_languages == tweets_languages, \
-    &quot;The tweets_languages variable does not have the expected values.&quot;
-    
-last_value = _
-
-def test_plot_exists():
-    assert type(last_value) == type(plt.hist(tweets_languages)), \
-    &#39;A plot was not the last output of the code cell.&#39;
-
-def strip_comment_lines(cell_input):
-    &quot;&quot;&quot;Returns cell input string with comment lines removed.&quot;&quot;&quot;
-    return &#39;\n&#39;.join(line for line in cell_input.splitlines() if not line.startswith(&#39;#&#39;))
-
-last_input = strip_comment_lines(In[-2])
-
-def test_plot_command():
-    assert &#39;plt.hist(tweets_languages)&#39; in last_input, \
-        &quot;We expected the plt.hist() method in your input.&quot;   
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3/3 tests passed
-</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="10.-Final-thoughts">10. Final thoughts<a class="anchor-link" href="#10.-Final-thoughts">&#182;</a></h2><p>🕵️‍♀️ The last histogram tells us that:</p>
@@ -17864,7 +17237,7 @@ From location based comparisons to analyzing the activity around a tweet to find
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
@@ -17890,54 +17263,6 @@ From location based comparisons to analyzing the activity around a tweet to find
 <pre>High Five!!!
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-def test_nothing_task_10():
-    assert True, &quot;Nothing to test.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
 </div>
 
 </div>
