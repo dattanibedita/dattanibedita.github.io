@@ -13017,45 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -13116,6 +13077,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Project:-Analyze-International-Debt-Statistics">Project: Analyze International Debt Statistics<a class="anchor-link" href="#Project:-Analyze-International-Debt-Statistics">&#182;</a></h1><p>Datacamp project solution by Nibedita Datta</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-The-World-Bank's-international-debt-data">1. The World Bank's international debt data<a class="anchor-link" href="#1.-The-World-Bank's-international-debt-data">&#182;</a></h2><p>It's not that we humans only take debts to manage our necessities. A country may also take debt to manage its economy. For example, infrastructure spending is one costly ingredient required for a country's citizens to lead comfortable lives. <a href="https://www.worldbank.org">The World Bank</a> is the organization that provides debt to countries.</p>
 <p>In this notebook, we are going to analyze international debt data collected by The World Bank. The dataset contains information about the amount of debt (in USD) owed by developing countries across several categories. We are going to find the answers to questions like: </p>
 <ul>
@@ -13128,9 +13097,9 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[143]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13160,7 +13129,7 @@ select * from international_debt limit 10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[143]:</div>
+    <div class="prompt output_prompt">Out[1]:</div>
 
 
 
@@ -13252,63 +13221,7 @@ select * from international_debt limit 10
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;  country_name country_code                                     indicator_name  indicator_code                 debt\n0  Afghanistan          AFG  Disbursements on external debt, long-term (DIS...  DT.DIS.DLXF.CD   72894453.700000003\n1  Afghanistan          AFG  Interest payments on external debt, long-term ...  DT.INT.DLXF.CD   53239440.100000001\n2  Afghanistan          AFG                  PPG, bilateral (AMT, current US$)  DT.AMT.BLAT.CD   61739336.899999999\n3  Afghanistan          AFG                  PPG, bilateral (DIS, current US$)  DT.DIS.BLAT.CD   49114729.399999999\n4  Afghanistan          AFG                  PPG, bilateral (INT, current US$)  DT.INT.BLAT.CD   39903620.100000001\n5  Afghanistan          AFG               PPG, multilateral (AMT, current US$)  DT.AMT.MLAT.CD             39107845\n6  Afghanistan          AFG               PPG, multilateral (DIS, current US$)  DT.DIS.MLAT.CD   23779724.300000001\n7  Afghanistan          AFG               PPG, multilateral (INT, current US$)  DT.INT.MLAT.CD             13335820\n8  Afghanistan          AFG         PPG, official creditors (AMT, current US$)  DT.AMT.OFFT.CD  100847181.900000006\n9  Afghanistan          AFG         PPG, official creditors (DIS, current US$)  DT.DIS.OFFT.CD   72894453.700000003&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[144]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Finding-the-number-of-distinct-countries">2. Finding the number of distinct countries<a class="anchor-link" href="#2.-Finding-the-number-of-distinct-countries">&#182;</a></h2><p>From the first ten rows, we can see the amount of debt owed by <em>Afghanistan</em> in the different debt indicators. But we do not know the number of different countries we have on the table. There are repetitions in the country names because a country is most likely to have debt in more than one debt indicator. </p>
@@ -13316,9 +13229,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[145]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13349,7 +13262,7 @@ FROM international_debt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[145]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13370,72 +13283,16 @@ FROM international_debt;
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[146]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;   total_distinct_countries\n0                       124&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[146]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Finding-out-the-distinct-debt-indicators">3. Finding out the distinct debt indicators<a class="anchor-link" href="#3.-Finding-out-the-distinct-debt-indicators">&#182;</a></h2><p>We can see there are a total of 124 countries present on the table. As we saw in the first section, there is a column called <code>indicator_name</code> that briefly specifies the purpose of taking the debt. Just beside that column, there is another column called <code>indicator_code</code> which symbolizes the category of these debts. Knowing about these various debt indicators will help us to understand the areas in which a country can possibly be indebted to. </p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[147]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13467,7 +13324,7 @@ ORDER BY distinct_debt_indicators;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[147]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13560,63 +13417,7 @@ ORDER BY distinct_debt_indicators;
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[148]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;   distinct_debt_indicators\n0            DT.AMT.BLAT.CD\n1            DT.AMT.DLXF.CD\n2            DT.AMT.DPNG.CD\n3            DT.AMT.MLAT.CD\n4            DT.AMT.OFFT.CD\n5            DT.AMT.PBND.CD\n6            DT.AMT.PCBK.CD\n7            DT.AMT.PROP.CD\n8            DT.AMT.PRVT.CD\n9            DT.DIS.BLAT.CD\n10           DT.DIS.DLXF.CD\n11           DT.DIS.MLAT.CD\n12           DT.DIS.OFFT.CD\n13           DT.DIS.PCBK.CD\n14           DT.DIS.PROP.CD\n15           DT.DIS.PRVT.CD\n16           DT.INT.BLAT.CD\n17           DT.INT.DLXF.CD\n18           DT.INT.DPNG.CD\n19           DT.INT.MLAT.CD\n20           DT.INT.OFFT.CD\n21           DT.INT.PBND.CD\n22           DT.INT.PCBK.CD\n23           DT.INT.PROP.CD\n24           DT.INT.PRVT.CD&#39;
-    try:    
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[148]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="4.-Totaling-the-amount-of-debt-owed-by-the-countries">4. Totaling the amount of debt owed by the countries<a class="anchor-link" href="#4.-Totaling-the-amount-of-debt-owed-by-the-countries">&#182;</a></h2><p>As mentioned earlier, the financial debt of a particular country represents its economic state. But if we were to project this on an overall global scale, how will we approach it?</p>
@@ -13624,9 +13425,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[149]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13657,7 +13458,7 @@ FROM international_debt;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[149]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13678,63 +13479,7 @@ FROM international_debt;
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[150]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;   total_debt\n0  3079734.49&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[150]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-Country-with-the-highest-debt">5. Country with the highest debt<a class="anchor-link" href="#5.-Country-with-the-highest-debt">&#182;</a></h2><p>"Human beings cannot comprehend very large or very small numbers. It would be useful for us to acknowledge that fact." - <a href="https://en.wikipedia.org/wiki/Daniel_Kahneman">Daniel Kahneman</a>. That is more than <em>3 million <strong>million</strong></em> USD, an amount which is really hard for us to fathom. </p>
@@ -13742,9 +13487,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[151]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13779,7 +13524,7 @@ LIMIT 1;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[151]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13802,63 +13547,7 @@ LIMIT 1;
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[152]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;  country_name              total_debt\n0        China  285793494734.200001568&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[152]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6.-Average-amount-of-debt-across-indicators">6. Average amount of debt across indicators<a class="anchor-link" href="#6.-Average-amount-of-debt-across-indicators">&#182;</a></h2><p>So, it was <em>China</em>. A more in-depth breakdown of China's debts can be found <a href="https://datatopics.worldbank.org/debt/ids/country/CHN">here</a>. </p>
@@ -13866,9 +13555,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[153]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -13904,7 +13593,7 @@ LIMIT 10;
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[153]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13974,63 +13663,7 @@ LIMIT 10;
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;   debt_indicator                                     indicator_name          average_debt\n0  DT.AMT.DLXF.CD  Principal repayments on external debt, long-te...  5904868401.499193612\n1  DT.AMT.DPNG.CD  Principal repayments on external debt, private...  5161194333.812658349\n2  DT.DIS.DLXF.CD  Disbursements on external debt, long-term (DIS...  2152041216.890243888\n3  DT.DIS.OFFT.CD         PPG, official creditors (DIS, current US$)  1958983452.859836046\n4  DT.AMT.PRVT.CD          PPG, private creditors (AMT, current US$)  1803694101.963265321\n5  DT.INT.DLXF.CD  Interest payments on external debt, long-term ...  1644024067.650806481\n6  DT.DIS.BLAT.CD                  PPG, bilateral (DIS, current US$)  1223139290.398230108\n7  DT.INT.DPNG.CD  Interest payments on external debt, private no...  1220410844.421518983\n8  DT.AMT.OFFT.CD         PPG, official creditors (AMT, current US$)  1191187963.083064523\n9  DT.AMT.PBND.CD                      PPG, bonds (AMT, current US$)  1082623947.653623188&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[154]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="7.-The-highest-amount-of-principal-repayments">7. The highest amount of principal repayments<a class="anchor-link" href="#7.-The-highest-amount-of-principal-repayments">&#182;</a></h2><p>We can see that the indicator <code>DT.AMT.DLXF.CD</code> tops the chart of average debt. This category includes repayment of long term debts. Countries take on long-term debt to acquire immediate capital. More information about this category can be found <a href="https://datacatalog.worldbank.org/principal-repayments-external-debt-long-term-amt-current-us-0">here</a>. </p>
@@ -14039,9 +13672,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[155]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -14077,7 +13710,7 @@ WHERE debt = (SELECT
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[155]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -14100,63 +13733,7 @@ WHERE debt = (SELECT
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[156]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;  country_name                                     indicator_name\n0        China  Principal repayments on external debt, long-te...&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[156]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="8.-The-most-common-debt-indicator">8. The most common debt indicator<a class="anchor-link" href="#8.-The-most-common-debt-indicator">&#182;</a></h2><p>China has the highest amount of debt in the long-term debt (<code>DT.AMT.DLXF.CD</code>) category. This is verified by <a href="https://data.worldbank.org/indicator/DT.AMT.DLXF.CD?end=2018&most_recent_value_desc=true">The World Bank</a>. It is often a good idea to verify our analyses like this since it validates that our investigations are correct. </p>
@@ -14164,9 +13741,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -14201,7 +13778,7 @@ LIMIT 20
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[157]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14300,63 +13877,7 @@ LIMIT 20
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;    indicator_code  indicator_count\n0   DT.INT.OFFT.CD              124\n1   DT.INT.MLAT.CD              124\n2   DT.INT.DLXF.CD              124\n3   DT.AMT.OFFT.CD              124\n4   DT.AMT.MLAT.CD              124\n5   DT.AMT.DLXF.CD              124\n6   DT.DIS.DLXF.CD              123\n7   DT.INT.BLAT.CD              122\n8   DT.DIS.OFFT.CD              122\n9   DT.AMT.BLAT.CD              122\n10  DT.DIS.MLAT.CD              120\n11  DT.DIS.BLAT.CD              113\n12  DT.INT.PRVT.CD               98\n13  DT.AMT.PRVT.CD               98\n14  DT.INT.PCBK.CD               84\n15  DT.AMT.PCBK.CD               84\n16  DT.INT.DPNG.CD               79\n17  DT.AMT.DPNG.CD               79\n18  DT.INT.PBND.CD               69\n19  DT.AMT.PBND.CD               69&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[158]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered celltag_context"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="9.-Other-viable-debt-issues-and-conclusion">9. Other viable debt issues and conclusion<a class="anchor-link" href="#9.-Other-viable-debt-issues-and-conclusion">&#182;</a></h2><p>There are a total of six debt indicators in which all the countries listed in our dataset have taken debt. The indicator <code>DT.AMT.DLXF.CD</code> is also there in the list. So, this gives us a clue that all these countries are suffering from a common economic issue. But that is not the end of the story, a part of the story rather. </p>
@@ -14365,9 +13886,9 @@ def test_output():
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
+<div class="cell border-box-sizing code_cell rendered celltag_sample_code">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">sql</span>
@@ -14403,7 +13924,7 @@ LIMIT 10
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[159]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14465,62 +13986,6 @@ LIMIT 10
         <td>40160766261.599998474</td>
     </tr>
 </table>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">nose</span>
-# %%nose needs to be included at the beginning of every @tests cell
-
-last_output = _
-
-def test_output():
-    correct_result_string = &#39;                                   country_name  indicator_code           maximum_debt\n0                                         China  DT.AMT.DLXF.CD  96218620835.699996948\n1                                        Brazil  DT.AMT.DLXF.CD  90041840304.100006104\n2                                         China  DT.AMT.DPNG.CD  72392986213.800003052\n3                            Russian Federation  DT.AMT.DLXF.CD          66589761833.5\n4                                        Turkey  DT.AMT.DLXF.CD  51555031005.800003052\n5                                    South Asia  DT.AMT.DLXF.CD  48756295898.199996948\n6                                        Brazil  DT.AMT.PRVT.CD  43598697498.599998474\n7                            Russian Federation  DT.AMT.DPNG.CD  42800154974.900001526\n8                                        Brazil  DT.AMT.DPNG.CD  41831444053.300003052\n9  Least developed countries: UN classification  DT.DIS.DLXF.CD  40160766261.599998474&#39;
-    try:
-        assert last_output.DataFrame().to_string() == correct_result_string
-    except AttributeError:
-        assert False, &quot;Please ensure a SQL ResultSet is the output of the code cell.&quot;
-    except AssertionError:
-        assert False, &quot;The results of the query are incorrect. Please review the instructions and check the hint if necessary.&quot;
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[160]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1/1 tests passed
-</pre>
 </div>
 
 </div>
